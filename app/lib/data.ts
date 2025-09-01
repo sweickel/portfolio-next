@@ -1,12 +1,41 @@
 import { Project } from "./interfaces/project";
-import { getBlogPostsMock, getProjectsMock } from "./mock/reponse";
 import { BlogPost } from "./interfaces/blog";
+import postgres from "postgres";
 
-export async function getProjects(): Promise<Project[] | []> {
-  return Promise.resolve(getProjectsMock);
+const sql = postgres(process.env.POSTGRES_URL!, { ssl: "require" });  
+
+async function retrieveProjects() {
+  const projects = await sql<Project[]>`SELECT * FROM projects ORDER BY created_at DESC`;
+  return projects;
 }
 
-export async function getBlogPosts(): Promise<BlogPost[] | []> {
-  return Promise.resolve(getBlogPostsMock);
+async function retrievePosts() {
+  const posts = await sql<BlogPost[]>`SELECT * FROM posts ORDER BY created_at DESC`;
+  return posts.map(post => {
+    return {
+      ...post,
+      date: post.date.toLocaleString()
+    };
+  });
+}
+
+export async function getProjects(): Promise<Project[]> {
+  try {
+    return await retrieveProjects();
+  }
+  catch (error) {
+    console.error("Failed to fetch projects", error);
+    return [];
+  }
+}
+
+export async function getBlogPosts(): Promise<BlogPost[]> {
+  try {
+    return await retrievePosts();
+  }
+  catch (error) {
+    console.error("Failed to fetch blog posts", error);
+    return [];
+  }
 }
 

@@ -9,12 +9,11 @@ export default async function FeaturedBlogPosts() {
     <section className="my-8">
       <h2 className="text-2xl font-bold mb-4 text-primary text-center">Latest Blog Posts</h2>
       <div className="space-y-4">
-        {posts.map((post, index) =>
-          {
-            if (index > 2) return null;
-            return <BlogCard key={post.title} {...post} />
-          }
-        )}
+        {posts.map((post, index) => {
+          if (index > 2) return null;
+          
+          return <BlogCard key={post.title} {...post} />;
+        })}
       </div>
       <div className="text-center mt-6">
         <Link
