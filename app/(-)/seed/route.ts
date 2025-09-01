@@ -52,10 +52,11 @@ async function seedProjects() {
 
 export async function GET() {
   try {
-    return await sql.begin(() => [
+    const result = await sql.begin(() => [
       seedPosts(),
       seedProjects(),
     ]);
+    return Response.json({ message: "Seeding completed" }, { status: 200 });
   } catch (error) {
     return Response.json({ error }, { status: 500 });
   }
