@@ -1,33 +1,26 @@
+import { Link } from '@/ui';
+
 export default function Page() {
+  const links = [
+    { href: "https://github.com/sweickel", label: "GitHub" },
+    { href: "https://linkedin.com/in/sweickel", label: "LinkedIn" },
+    { href: "mailto:sean@weickel.org", label: "Email" },
+  ];
   return (
-    <section className="py-20 bg-emerald-100 text-black pt-16 text-weight-bold">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
-        <p className="text-lg mb-6">
+    <div className="flex justify-center items-center py-12 min-h-screen">
+      <div className="bg-white rounded-[2.5rem] shadow-2xl w-full max-w-xl p-10 text-gray-900 overflow-hidden text-center">
+        <h2 className="text-3xl font-bold mb-8 text-blue-900">Get in Touch</h2>
+        <p className="text-lg mb-6 text-gray-700">
           Interested in collaborating? Reach out to me!
         </p>
-        <div className="flex justify-center space-x-4">
-          <a
-            href="https://github.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://linkedin.com/in/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            LinkedIn
-          </a>
-          <a href="mailto:your.email@example.com" className="hover:underline">
-            Email
-          </a>
+        <div className="flex justify-center space-x-6">
+          {links.map((link) => (
+            <Link key={link.label} href={link.href}>
+              {link.label}
+            </Link>
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
