@@ -1,2 +1,60 @@
 @import "tailwindcss";
 
+body {
+	background: #60a5fa;
+	color: #222;
+}
+.section-blue {
+	background: #16213e;
+	color: #fff;
+}
+.section-white {
+	background: #fff;
+	color: #222;
+}
+.navbar {
+	background: #fff;
+	color: #22305a;
+	box-shadow: 0 2px 8px 0 rgba(34,48,90,0.08);
+	border-bottom: 1px solid #e5e7eb;
+	position: sticky;
+	top: 0;
+	z-index: 50;
+}
+
+.card {
+	background: #22305a;
+	border-radius: 1.5rem;
+	box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+	padding: 2rem;
+}
+
+.rounded-3xl {
+	border-radius: 1.5rem;
+}
+
+.rounded-2xl {
+	border-radius: 1rem;
+}
+
+.shadow-lg {
+	box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+}
+
+.text-white {
+	color: #fff;
+}
+
+.bg-blue-500 {
+	background-color: #3b82f6;
+}
+.bg-blue-600 {
+	background-color: #2563eb;
+}
+.bg-blue-900 {
+	background-color: #1e293b;
+}
+.bg-white\/5 {
+	background-color: rgba(255,255,255,0.05);
+}
+

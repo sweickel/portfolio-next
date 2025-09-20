@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/ui";
 import { HomeIcon } from "@heroicons/react/24/outline";
 
 const links = [
@@ -12,19 +12,19 @@ const links = [
 
 export default function Navbar() {
   return (
-    <nav className="bg-secondary text-background p-4 w-full top-0 shadow-md z-10">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="navbar">
+      <div className="w-full max-w-5xl mx-auto flex justify-around md:justify-between items-center py-4 px-4">
         <Link
           href="/"
-          className="text-xl font-bold flex items-center hover:text-accent"
+          className="text-xl font-bold flex items-center hover:text-blue-700"
           aria-label="Dashboard"
         >
-          <HomeIcon className="h-6 w-6 mr-2 text-accent" />
+          <HomeIcon className="h-6 w-6 mr-2 text-blue-700" />
         </Link>
 
         <div className="space-x-4">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:underline">
+            <Link key={link.href} href={link.href} className="hover:underline hover:text-blue-700">
               {link.label}
             </Link>
           ))}
