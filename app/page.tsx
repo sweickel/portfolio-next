@@ -55,25 +55,25 @@ export default function Page() {
         <section className="section-blue p-12 md:rounded-b-[2.5rem]">
           <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
           <p className="mb-6">
-            Forpate toosios and sevatgtreavon on twioooloes.
+            Interested in collaborating or have a project in mind? Reach out to discuss your ideas, request a quote, or learn more about my services.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-blue-900 rounded-2xl p-4 flex flex-col items-center">
               <span className="text-4xl mb-2 text-white">⚙️</span>
               <p className="text-white font-semibold">
-                Fromelots Engineering Entiotrocine
+                Software Engineering & AI Solutions
               </p>
             </div>
             <div className="bg-blue-900 rounded-2xl p-4 flex flex-col items-center">
               <span className="text-4xl mb-2 text-white">🧑‍💻</span>
               <p className="text-white font-semibold">
-                Development Workouloria Fhrchndioeion
+                Custom Application Development
               </p>
             </div>
             <div className="bg-blue-900 rounded-2xl p-4 flex flex-col items-center">
               <span className="text-4xl mb-2 text-white">🌐</span>
               <p className="text-white font-semibold">
-                Full-Stack Web Devobooinie
+                Full-Stack Web Development
               </p>
             </div>
           </div>
