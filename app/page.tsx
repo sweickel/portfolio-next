@@ -14,7 +14,9 @@ export default function Page() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               AI-Driven Development Portfolio
             </h1>
-            <p className="text-lg mb-6">{`Præct basedolode, asperesong nogome rnast and treaintcive oettronnigsicon.`}</p>
+            <p className="text-lg mb-6">
+              Showcasing innovative AI-driven solutions, full-stack web development, and engineering projects. Explore my work, blog posts, and expertise in building impactful digital experiences.
+            </p>
             <button className="bg-white text-blue-700 font-semibold py-2 px-6 rounded-full">
               Contact Me
             </button>
